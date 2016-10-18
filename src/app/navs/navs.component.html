@@ -2,50 +2,10 @@
   <div class="col-md-6">
     <h2>Accordion</h2>
     <ngb-accordion #acc="ngbAccordion" activeIds="1,2">
-      <ngb-panel title="I'm nothing special" id="0">
-        <template ngbPanelContent>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas rutrum dignissim sem, at vestibulum neque rutrum vitae. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam vitae ligula consequat ligula dapibus gravida non ut nisi. Cras mi metus, mollis nec dolor at, lobortis varius nulla.
-        </template>
-      </ngb-panel>
-      <ngb-panel title="I'm active by default" id="1">
-        <template ngbPanelContent>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas rutrum dignissim sem, at vestibulum neque rutrum vitae. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam vitae ligula consequat ligula dapibus gravida non ut nisi. Cras mi metus, mollis nec dolor at, lobortis varius nulla.
-        </template>
-      </ngb-panel>
-      <ngb-panel title="So am I" id="2">
-        <template ngbPanelContent>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas rutrum dignissim sem, at vestibulum neque rutrum vitae. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam vitae ligula consequat ligula dapibus gravida non ut nisi. Cras mi metus, mollis nec dolor at, lobortis varius nulla.
-        </template>
-      </ngb-panel>
-      <ngb-panel title="I'm full of info" id="3" type="info">
-        <template ngbPanelContent>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas rutrum dignissim sem, at vestibulum neque rutrum vitae. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam vitae ligula consequat ligula dapibus gravida non ut nisi. Cras mi metus, mollis nec dolor at, lobortis varius nulla.
-        </template>
-      </ngb-panel>
-      <ngb-panel title="I'm successful" id="4" type="success">
-        <template ngbPanelContent>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas rutrum dignissim sem, at vestibulum neque rutrum vitae. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam vitae ligula consequat ligula dapibus gravida non ut nisi. Cras mi metus, mollis nec dolor at, lobortis varius nulla.
-        </template>
-      </ngb-panel>
-      <ngb-panel title="I'm warning you" id="5" type="warning">
-        <template ngbPanelContent>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas rutrum dignissim sem, at vestibulum neque rutrum vitae. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam vitae ligula consequat ligula dapibus gravida non ut nisi. Cras mi metus, mollis nec dolor at, lobortis varius nulla.
-        </template>
-      </ngb-panel>
-      <ngb-panel title="I'm dangerous" id="6" type="danger">
-        <template ngbPanelContent>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas rutrum dignissim sem, at vestibulum neque rutrum vitae. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam vitae ligula consequat ligula dapibus gravida non ut nisi. Cras mi metus, mollis nec dolor at, lobortis varius nulla.
-        </template>
-      </ngb-panel>
-      <ngb-panel id="7" >
+      <ngb-panel *ngFor="let panel of accordionPanels;" id="{{panel.id}}" type="{{panel.type}}" disabled="{{panel.disabled}}">
         <template ngbPanelTitle>
-          <span>&#10084; <em>I've got a <strong>complex</strong> title</em></span>
+          <span [innerHTML]="panel.title"></span>
         </template>
-        <template ngbPanelContent>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas rutrum dignissim sem, at vestibulum neque rutrum vitae. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam vitae ligula consequat ligula dapibus gravida non ut nisi. Cras mi metus, mollis nec dolor at, lobortis varius nulla.
-        </template>
-      </ngb-panel>
-      <ngb-panel title="I'm disabled" [disabled]="true" id="8">
         <template ngbPanelContent>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas rutrum dignissim sem, at vestibulum neque rutrum vitae. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam vitae ligula consequat ligula dapibus gravida non ut nisi. Cras mi metus, mollis nec dolor at, lobortis varius nulla.
         </template>
