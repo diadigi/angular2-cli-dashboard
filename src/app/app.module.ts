@@ -9,13 +9,14 @@ import { routes } from './app.routes';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
+
+import { HomeModule } from './home/home.module';
+
 import { NavsComponent } from './navs/navs.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     NavsComponent
   ],
   imports: [
@@ -23,7 +24,8 @@ import { NavsComponent } from './navs/navs.component';
     FormsModule,
     HttpModule,
     NgbModule.forRoot(),
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    HomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
