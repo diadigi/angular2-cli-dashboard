@@ -11,6 +11,7 @@ import {DataListService} from '../shared/data-list/data-list.service';
   styleUrls: ['./navs.component.css'],
   providers: [NgbAccordionConfig, NgbTabsetConfig]
 })
+
 export class NavsComponent implements OnInit {
   accordionPanels: any[] = [];
   tabset: any[] = [];

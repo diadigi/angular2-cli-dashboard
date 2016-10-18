@@ -1,3 +1,28 @@
-<p>
-  general works!
-</p>
+<div class="row m-b-3 m-t-3">
+  <div class="col-md-12 m-t-3">
+    <h1>General</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-header">
+        <h2 class="card-title">Collapse</h2>
+        <p class="card-subtitle text-muted">Powered by <a href="https://ng-bootstrap.github.io" target="_blank">ng-bootstrap</a></p>
+      </div>
+      <div class="card-block">
+        <div [ngbCollapse]="isCollapsed">
+          <div class="card">
+            <div class="card-block">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et sagittis dolor, vel vulputate nibh. Mauris purus odio, posuere at feugiat id, sagittis a mauris.
+            </div>
+          </div>
+        </div>
+        <footer>
+          <hr/>
+          <button class="btn btn-sm btn-outline-primary" (click)="isCollapsed = !isCollapsed">Toggle</button>
+        </footer>
+      </div>
+    </div>
+  </div>
+</div>
