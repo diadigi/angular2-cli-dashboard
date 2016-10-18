@@ -1,0 +1,53 @@
+[
+  {
+    "id": 0,
+    "title": "I'm nothing special",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas rutrum dignissim sem, at vestibulum neque rutrum vitae. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae."
+  },
+  {
+    "title": "I'm active by default",
+    "id": 1,
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas rutrum dignissim sem, at vestibulum neque rutrum vitae. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae."
+  },
+  {
+    "title": "So am I",
+    "id": 2,
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas rutrum dignissim sem, at vestibulum neque rutrum vitae. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae."
+  },
+  {
+    "title": "I'm full of info",
+    "id": 3,
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas rutrum dignissim sem, at vestibulum neque rutrum vitae. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.",
+    "type": "info"
+  },
+  {
+    "title": "I'm successful",
+    "id": 4,
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas rutrum dignissim sem, at vestibulum neque rutrum vitae. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.",
+    "type": "success"
+  },
+  {
+    "title": "I'm warning you",
+    "id": 5,
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas rutrum dignissim sem, at vestibulum neque rutrum vitae. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.",
+    "type": "warning"
+  },
+  {
+    "title": "I'm dangerous",
+    "id": 6,
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas rutrum dignissim sem, at vestibulum neque rutrum vitae. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.",
+    "type": "danger"
+  },
+  {
+    "title": "<span>&#10084; <em>I've got a <strong>complex</strong> title</em></span>",
+    "id": 7,
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas rutrum dignissim sem, at vestibulum neque rutrum vitae. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.",
+    "titleTemplate": true
+  },
+  {
+    "title": "I'm disabled",
+    "id": 8,
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas rutrum dignissim sem, at vestibulum neque rutrum vitae. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.",
+    "disabled": true
+  }
+]

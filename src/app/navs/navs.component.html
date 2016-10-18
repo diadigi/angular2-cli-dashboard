@@ -1,0 +1,70 @@
+<div class="row m-b-3">
+  <div class="col-md-12">
+    <h1>Navigation & Accordions</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-header">
+        <h2 class="card-title">Accordion</h2>
+        <p class="card-subtitle text-muted">Powered by <a href="https://ng-bootstrap.github.io" target="_blank">ng-bootstrap</a></p>
+      </div>
+      <div class="card-block">
+        <ngb-accordion #acc="ngbAccordion" activeIds="1,2">
+         <ngb-panel *ngFor="let panel of accordionPanels;" id="{{panel.id}}" type="{{panel.type}}" disabled="{{panel.disabled}}">
+           <template ngbPanelTitle>
+             <span [innerHTML]="panel.title"></span>
+           </template>
+           <template ngbPanelContent>
+             {{panel.content}}
+           </template>
+         </ngb-panel>
+        </ngb-accordion>
+        <footer>
+          <hr/>
+          <button class="btn btn-sm btn-outline-primary" (click)="acc.toggle('0')">Toggle first</button>
+          <button class="btn btn-sm btn-outline-primary" (click)="acc.toggle('1')">Toggle second</button>
+        </footer>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-header">
+        <h2 class="card-title">Tab Navigation</h2>
+        <p class="card-subtitle text-muted">Powered by <a href="https://ng-bootstrap.github.io" target="_blank">ng-bootstrap</a></p>
+      </div>
+      <div class="card-block">
+        <ngb-tabset #tp="ngbTabset">
+          <ngb-tab *ngFor="let tab of tabset;" id="{{tab.id}}" disabled="{{tab.disabled}}">
+            <template ngbTabTitle><span [innerHTML]="tab.title"></span></template>
+            <template ngbTabContent><div [innerHTML]="tab.content"></div></template>
+          </ngb-tab>
+        </ngb-tabset>
+        <footer>
+          <hr/>
+          <button class="btn btn-sm btn-outline-primary" (click)="tp.select('0')">Select first</button>
+        </footer>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <h2 class="card-title">Pills Navigation</h2>
+        <p class="card-subtitle text-muted">Powered by <a href="https://ng-bootstrap.github.io" target="_blank">ng-bootstrap</a></p>
+      </div>
+      <div class="card-block">
+        <ngb-tabset type="pills" #ts="ngbTabset">
+          <ngb-tab *ngFor="let tab of tabset;" id="{{tab.id}}" disabled="{{tab.disabled}}">
+            <template ngbTabTitle><span [innerHTML]="tab.title"></span></template>
+            <template ngbTabContent><div [innerHTML]="tab.content"></div></template>
+          </ngb-tab>
+        </ngb-tabset>
+        <footer>
+          <hr/>
+          <button class="btn btn-sm btn-outline-primary" (click)="ts.select('0')">Select first</button>
+        </footer>
+      </div>
+    </div>
+  </div>
+</div>
