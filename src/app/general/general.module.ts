@@ -9,6 +9,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     NgbModule.forRoot()
   ],
   declarations: [GeneralComponent],
-  exports: [GeneralComponent],
+  exports: [GeneralComponent]
 })
 export class GeneralModule { }
