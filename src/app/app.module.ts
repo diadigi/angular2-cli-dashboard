@@ -11,13 +11,11 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
 
 import { HomeModule } from './home/home.module';
-
-import { NavsComponent } from './navs/navs.component';
+import { NavsModule } from './navs/navs.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    NavsComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +23,8 @@ import { NavsComponent } from './navs/navs.component';
     HttpModule,
     NgbModule.forRoot(),
     RouterModule.forRoot(routes),
-    HomeModule
+    HomeModule,
+    NavsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
