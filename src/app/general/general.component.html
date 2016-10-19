@@ -65,4 +65,22 @@
       </div>
     </div>
   </div>
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-header">
+        <h2 class="card-title">Datepicker</h2>
+        <p class="card-subtitle text-muted">Powered by <a href="https://ng-bootstrap.github.io" target="_blank">ng-bootstrap</a></p>
+      </div>
+      <div class="card-block">
+        <ngb-datepicker #dp [(ngModel)]="dpModel"></ngb-datepicker>
+        <footer>
+          <hr/>
+          <button class="btn btn-sm btn-outline-primary" (click)="selectToday()">Pick today</button>
+          <button class="btn btn-sm btn-outline-primary" (click)="dp.navigateTo()">Current month</button>
+          <button class="btn btn-sm btn-outline-primary" (click)="dp.navigateTo({year: 2013, month: 6})">June 2013</button>
+          <p class="m-t-2 info" *ngIf="dpModel!=undefined">Selected date is: {{dpModel | json}}</p>
+        </footer>
+      </div>
+    </div>
+  </div>
 </div>
