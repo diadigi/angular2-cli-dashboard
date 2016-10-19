@@ -13,6 +13,7 @@ import { AppComponent } from './app.component';
 import { HomeModule } from './home/home.module';
 import { GeneralModule } from './general/general.module';
 import { NavsModule } from './navs/navs.module';
+import { BtnsModule } from './btns/btns.module';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { NavsModule } from './navs/navs.module';
     RouterModule.forRoot(routes),
     HomeModule,
     GeneralModule,
-    NavsModule
+    NavsModule,
+    BtnsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
