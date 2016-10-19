@@ -3,6 +3,7 @@ import { HomeComponent } from './home/home.component';
 import { GeneralComponent } from './general/general.component';
 import { NavsComponent } from './navs/navs.component';
 import { IconsComponent } from './icons/icons.component';
+import { GmapComponent } from './gmap/gmap.component';
 
 export const routes: Routes = [
   {
@@ -30,5 +31,9 @@ export const routes: Routes = [
         component: IconsComponent
       }
     ]
-  }
+  },
+  {
+    path: 'google-maps',
+    component: GmapComponent
+  },
 ];
