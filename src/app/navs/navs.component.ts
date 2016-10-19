@@ -19,7 +19,7 @@ export class NavsComponent implements OnInit {
 
   constructor(accConfig: NgbAccordionConfig, tsConfig: NgbTabsetConfig, public dataListService: DataListService) {
     accConfig.closeOthers = false;
-    tsConfig.type = "tabs";
+    tsConfig.type = 'tabs';
   }
 
   ngOnInit() {

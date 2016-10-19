@@ -18,14 +18,14 @@ export class GeneralComponent implements OnInit {
   public dpDisabled = false;
 
   constructor(ddConfig: NgbDropdownConfig, dpConfig: NgbDatepickerConfig) {
-    //dropdown config
+    // dropdown config
     ddConfig.autoClose = true;
 
-    //datepicker config
-    //datepicker limits
+    // datepicker config
+    // datepicker limits
     dpConfig.minDate = {year: 1900, month: 1, day: 1};
     dpConfig.maxDate = {year: 2099, month: 12, day: 31};
-    //disable weekends
+    // disable weekends
     dpConfig.markDisabled = (date: NgbDateStruct) => {
       const d = new Date(date.year, date.month - 1, date.day);
       return d.getDay() === 0 || d.getDay() === 6;
