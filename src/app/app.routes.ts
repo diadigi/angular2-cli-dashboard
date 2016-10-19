@@ -11,7 +11,11 @@ export const routes: Routes = [
   {
     path: 'ui',
     children: [
-      { path: '' },
+      {
+        path: '',
+        redirectTo: 'general', 
+        pathMatch: 'full'
+      },
       {
         path: 'general',
         component: GeneralComponent
