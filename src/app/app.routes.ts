@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { GeneralComponent } from './general/general.component';
 import { NavsComponent } from './navs/navs.component';
+import { BtnsComponent } from './btns/btns.component';
 
 export const routes: Routes = [
   {
@@ -13,7 +14,7 @@ export const routes: Routes = [
     children: [
       {
         path: '',
-        redirectTo: 'general', 
+        redirectTo: 'general',
         pathMatch: 'full'
       },
       {
@@ -23,6 +24,10 @@ export const routes: Routes = [
       {
         path: 'navs',
         component: NavsComponent
+      },
+      {
+        path: 'btns',
+        component: BtnsComponent
       }
     ]
   }
