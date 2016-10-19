@@ -2,7 +2,7 @@ import { Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { GeneralComponent } from './general/general.component';
 import { NavsComponent } from './navs/navs.component';
-import { BtnsComponent } from './btns/btns.component';
+import { IconsComponent } from './icons/icons.component';
 
 export const routes: Routes = [
   {
@@ -22,12 +22,12 @@ export const routes: Routes = [
         component: GeneralComponent
       },
       {
-        path: 'navs',
+        path: 'navigation-accordions',
         component: NavsComponent
       },
       {
-        path: 'btns',
-        component: BtnsComponent
+        path: 'icons',
+        component: IconsComponent
       }
     ]
   }

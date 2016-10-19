@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { BtnsComponent } from './btns.component';
+import { IconsComponent } from './icons.component';
 
 import { Angular2FontawesomeModule } from 'angular2-fontawesome/angular2-fontawesome'
 
@@ -9,7 +9,7 @@ import { Angular2FontawesomeModule } from 'angular2-fontawesome/angular2-fontawe
     CommonModule,
     Angular2FontawesomeModule
   ],
-  declarations: [BtnsComponent],
-  exports: [BtnsComponent]
+  declarations: [IconsComponent],
+  exports: [IconsComponent]
 })
-export class BtnsModule { }
+export class IconsModule { }

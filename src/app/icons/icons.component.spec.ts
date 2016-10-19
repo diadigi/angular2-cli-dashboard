@@ -1,11 +1,11 @@
 /* tslint:disable:no-unused-variable */
 
 import { TestBed, async } from '@angular/core/testing';
-import { BtnsComponent } from './btns.component';
+import { IconsComponent } from './icons.component';
 
-describe('Component: Btns', () => {
+describe('Component: Icons', () => {
   it('should create an instance', () => {
-    let component = new BtnsComponent();
+    let component = new IconsComponent();
     expect(component).toBeTruthy();
   });
 });

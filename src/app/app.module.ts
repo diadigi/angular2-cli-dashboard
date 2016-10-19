@@ -13,7 +13,7 @@ import { AppComponent } from './app.component';
 import { HomeModule } from './home/home.module';
 import { GeneralModule } from './general/general.module';
 import { NavsModule } from './navs/navs.module';
-import { BtnsModule } from './btns/btns.module';
+import { IconsModule } from './icons/icons.module';
 
 @NgModule({
   declarations: [
@@ -28,7 +28,7 @@ import { BtnsModule } from './btns/btns.module';
     HomeModule,
     GeneralModule,
     NavsModule,
-    BtnsModule
+    IconsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
