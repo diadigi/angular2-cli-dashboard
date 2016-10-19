@@ -1,5 +1,5 @@
-<div class="row m-b-3 m-t-3">
-  <div class="col-md-12 m-t-3">
+<div class="row mb-3 mt-3">
+  <div class="col-md-12 mt-3">
     <h1>General</h1>
   </div>
 </div>
@@ -79,7 +79,7 @@
           <button class="btn btn-sm btn-outline-{{dpDisabled ? 'success' : 'danger'}}" (click)="dpDisabled = !dpDisabled">
             {{ dpDisabled ? "Enable" : "Disable" }} Calendar
           </button>
-          <p class="m-t-2 info" *ngIf="dpModel!=undefined">Selected date is: {{dpModel | json}}</p>
+          <p class="mt-2 info" *ngIf="dpModel!=undefined">Selected date is: {{dpModel | json}}</p>
         </footer>
       </div>
     </div>
@@ -101,7 +101,7 @@
         </form>
         <hr/>
         <footer>
-          <p class="m-t-2 info" *ngIf="idpModel!=undefined">Selected date is: {{idpModel | json}}</p>
+          <p class="mt-2 info" *ngIf="idpModel!=undefined">Selected date is: {{idpModel | json}}</p>
         </footer>
       </div>
     </div>
