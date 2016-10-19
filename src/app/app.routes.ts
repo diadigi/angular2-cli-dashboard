@@ -9,11 +9,17 @@ export const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: 'general',
-    component: GeneralComponent
-  },
-  {
-    path: 'navs',
-    component: NavsComponent
+    path: 'ui',
+    children: [
+      { path: '' },
+      {
+        path: 'general',
+        component: GeneralComponent
+      },
+      {
+        path: 'navs',
+        component: NavsComponent
+      }
+    ]
   }
 ];
