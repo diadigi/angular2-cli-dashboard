@@ -15,6 +15,7 @@ const now = new Date();
 export class GeneralComponent implements OnInit {
   public isCollapsed = false;
   public dpModel: NgbDateStruct;
+  public dpDisabled = false;
 
   constructor(ddConfig: NgbDropdownConfig, dpConfig: NgbDatepickerConfig) {
     //dropdown config

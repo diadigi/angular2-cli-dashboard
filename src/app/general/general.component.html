@@ -64,21 +64,44 @@
         </footer>
       </div>
     </div>
-  </div>
-  <div class="col-md-6">
     <div class="card">
       <div class="card-header">
-        <h2 class="card-title">Datepicker</h2>
+        <h2 class="card-title">Basic Datepicker</h2>
         <p class="card-subtitle text-muted">Powered by <a href="https://ng-bootstrap.github.io" target="_blank">ng-bootstrap</a></p>
       </div>
       <div class="card-block">
-        <ngb-datepicker #dp [(ngModel)]="dpModel"></ngb-datepicker>
+        <ngb-datepicker #dp [(ngModel)]="dpModel" [disabled]="dpDisabled"></ngb-datepicker>
         <footer>
           <hr/>
           <button class="btn btn-sm btn-outline-primary" (click)="selectToday()">Pick today</button>
           <button class="btn btn-sm btn-outline-primary" (click)="dp.navigateTo()">Current month</button>
           <button class="btn btn-sm btn-outline-primary" (click)="dp.navigateTo({year: 2013, month: 6})">June 2013</button>
+          <button class="btn btn-sm btn-outline-{{dpDisabled ? 'success' : 'danger'}}" (click)="dpDisabled = !dpDisabled">
+            {{ dpDisabled ? "Enable" : "Disable" }} Calendar
+          </button>
           <p class="m-t-2 info" *ngIf="dpModel!=undefined">Selected date is: {{dpModel | json}}</p>
+        </footer>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <h2 class="card-title">Input Datepicker</h2>
+        <p class="card-subtitle text-muted">Powered by <a href="https://ng-bootstrap.github.io" target="_blank">ng-bootstrap</a></p>
+      </div>
+      <div class="card-block">
+        <form class="form-inline">
+          <div class="form-group">
+            <div class="input-group">
+              <input class="form-control" placeholder="yyyy-mm-dd" name="idp" [(ngModel)]="idpModel" ngbDatepicker #idp="ngbDatepicker">
+              <div class="input-group-addon" (click)="idp.toggle()" >
+                <span style="width: 1.2rem; height: 1rem; cursor: pointer;">&#10064;</span>
+              </div>
+            </div>
+          </div>
+        </form>
+        <hr/>
+        <footer>
+          <p class="m-t-2 info" *ngIf="idpModel!=undefined">Selected date is: {{idpModel | json}}</p>
         </footer>
       </div>
     </div>
