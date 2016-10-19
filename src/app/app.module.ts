@@ -14,6 +14,7 @@ import { HomeModule } from './home/home.module';
 import { GeneralModule } from './general/general.module';
 import { NavsModule } from './navs/navs.module';
 import { IconsModule } from './icons/icons.module';
+import { GmapModule } from './gmap/gmap.module';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { IconsModule } from './icons/icons.module';
     HomeModule,
     GeneralModule,
     NavsModule,
-    IconsModule
+    IconsModule,
+    GmapModule
   ],
   providers: [],
   bootstrap: [AppComponent]
