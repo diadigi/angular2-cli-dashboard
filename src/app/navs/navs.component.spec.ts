@@ -2,8 +2,8 @@
 
 import { TestBed, async } from '@angular/core/testing';
 import { NavsComponent } from './navs.component';
-import {NgbAccordionConfig} from '@ng-bootstrap/ng-bootstrap';
-import {NgbTabsetConfig} from '@ng-bootstrap/ng-bootstrap';
+import { NgbAccordionConfig } from '@ng-bootstrap/ng-bootstrap';
+import { NgbTabsetConfig } from '@ng-bootstrap/ng-bootstrap';
 
 
 describe('Component: Navs', () => {

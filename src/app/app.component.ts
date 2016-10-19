@@ -15,7 +15,6 @@ export class AppComponent {
     this.router.events.subscribe(event => {
       if (event.constructor.name === 'NavigationStart') {
         this.currentPath = event.url;
-        console.log(this.currentPath);
       }
     });
   }

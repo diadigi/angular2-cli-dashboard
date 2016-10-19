@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
-import {NgbAccordionConfig} from '@ng-bootstrap/ng-bootstrap';
-import {NgbTabsetConfig} from '@ng-bootstrap/ng-bootstrap';
+import { NgbAccordionConfig } from '@ng-bootstrap/ng-bootstrap';
+import { NgbTabsetConfig } from '@ng-bootstrap/ng-bootstrap';
 
-import {DataListService} from '../shared/data-list/data-list.service';
+import { DataListService } from '../shared/data-list/data-list.service';
 
 @Component({
   selector: 'app-navs',

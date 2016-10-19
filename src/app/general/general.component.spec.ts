@@ -2,7 +2,7 @@
 
 import { TestBed, async } from '@angular/core/testing';
 import { GeneralComponent } from './general.component';
-import {NgbDropdownConfig} from '@ng-bootstrap/ng-bootstrap';
+import { NgbDropdownConfig } from '@ng-bootstrap/ng-bootstrap';
 
 describe('Component: General', () => {
   let ddConfig = new NgbDropdownConfig;
