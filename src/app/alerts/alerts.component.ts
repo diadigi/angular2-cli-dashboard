@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./alerts.component.css']
 })
 export class AlertsComponent implements OnInit {
+  public cardCollapsed: any[] = [];
 
   constructor() { }
 

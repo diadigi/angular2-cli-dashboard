@@ -15,6 +15,7 @@ import { GeneralModule } from './general/general.module';
 import { NavsModule } from './navs/navs.module';
 import { IconsModule } from './icons/icons.module';
 import { GmapModule } from './gmap/gmap.module';
+import { AlertsModule } from './alerts/alerts.module';
 import { NotFoundModule } from './not-found/not-found.module';
 
 @NgModule({
@@ -32,6 +33,7 @@ import { NotFoundModule } from './not-found/not-found.module';
     NavsModule,
     IconsModule,
     GmapModule,
+    AlertsModule,
     NotFoundModule
   ],
   providers: [],
