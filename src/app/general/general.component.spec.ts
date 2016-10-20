@@ -60,8 +60,8 @@ describe('Component: General', () => {
       it('should set max', () => {
           expect(rConfig.max).toBeTruthy();
       });
-      it('should set disabled', () => {
-        expect(rConfig.disabled).toBeFalsy();
+      it('should set readonly', () => {
+        expect(rConfig.readonly).toBeFalsy();
       });
     });
 
