@@ -17,6 +17,7 @@ import { IconsModule } from './icons/icons.module';
 import { GmapModule } from './gmap/gmap.module';
 import { AlertsModule } from './alerts/alerts.module';
 import { NotFoundModule } from './not-found/not-found.module';
+import { NavbarModule } from './shared/navbar/navbar.module';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { NotFoundModule } from './not-found/not-found.module';
     IconsModule,
     GmapModule,
     AlertsModule,
-    NotFoundModule
+    NotFoundModule,
+    NavbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

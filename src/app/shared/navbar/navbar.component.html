@@ -1,0 +1,16 @@
+<nav class="navbar navbar-full navbar-fixed-top navbar-light bg-faded mb-3">
+  <a class="navbar-brand" [routerLink]="['/']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">{{title}}</a>
+
+  <button [routerLink]="['/']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" class="btn btn-outline-primary">Home</button>
+  <div ngbDropdown class="d-inline-block">
+    <button class="btn btn-outline-primary" [class.active]="currentPath.indexOf('ui') !== -1" id="dropdownMenuUI" ngbDropdownToggle>UI</button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuUI">
+      <a [routerLink]="['/ui/general']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" class="dropdown-item">General</a>
+      <a [routerLink]="['/ui/navigation-accordions']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" class="dropdown-item">Navigation & Accordions</a>
+      <a [routerLink]="['/ui/icons']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" class="dropdown-item">Icons</a>
+      <a [routerLink]="['/ui/alerts']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" class="dropdown-item">Alerts</a>
+    </div>
+
+    <button class="btn btn-outline-primary" [routerLink]="['/google-maps']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">Google Maps</button>
+  </div>
+</nav>
