@@ -7,6 +7,37 @@
   <div class="col-md-6">
     <div class="card">
       <div class="card-header">
+        <a (click)="cardCollapsed['progress_bars'] = !cardCollapsed['progress_bars']" class="text-muted card-collapse"><fa [name]="cardCollapsed['progress_bars']?'plus-circle':'minus-circle'" class="pull-right"></fa></a>
+        <h2 class="card-title">Progress Bars</h2>
+        <p class="card-subtitle text-muted">Powered by <a href="https://ng-bootstrap.github.io" target="_blank">ng-bootstrap</a></p>
+      </div>
+      <div class="card-block" [ngbCollapse]="cardCollapsed['progress_bars']">
+        <h4>Simple</h4>
+        <span class="small text-muted">Success</span>
+        <ngb-progressbar type="success" [value]="25"></ngb-progressbar>
+        <span class="small text-muted">Info</span>
+        <ngb-progressbar type="info" [value]="50"></ngb-progressbar>
+        <span class="small text-muted">Warning</span>
+        <ngb-progressbar type="warning" [value]="75"></ngb-progressbar>
+        <span class="small text-muted">Danger</span>
+        <ngb-progressbar type="danger" [value]="100"></ngb-progressbar>
+        <hr/>
+        <h4>Striped</h4>
+        <span class="small text-muted">Success</span>
+        <ngb-progressbar type="success" [value]="25" [striped]="true"></ngb-progressbar>
+        <span class="small text-muted">Info</span>
+        <ngb-progressbar type="info" [value]="50" [striped]="true"></ngb-progressbar>
+        <span class="small text-muted">Warning</span>
+        <ngb-progressbar type="warning" [value]="75" [striped]="true"></ngb-progressbar>
+        <span class="small text-muted">Danger</span>
+        <ngb-progressbar type="danger" [value]="100" [striped]="true"></ngb-progressbar>
+        <hr/>
+        <h4>Striped, animated</h4>
+        <ngb-progressbar type="success" [value]="25" [striped]="true" [animated]="true"></ngb-progressbar>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
         <a (click)="cardCollapsed['collapse'] = !cardCollapsed['collapse']" class="text-muted card-collapse"><fa [name]="cardCollapsed['collapse']?'plus-circle':'minus-circle'" class="pull-right"></fa></a>
         <h2 class="card-title">Collapse</h2>
         <p class="card-subtitle text-muted">Powered by <a href="https://ng-bootstrap.github.io" target="_blank">ng-bootstrap</a></p>
@@ -29,11 +60,11 @@
   <div class="col-md-6">
     <div class="card">
       <div class="card-header">
-        <a (click)="cardCollapsed['dropdown'] = !cardCollapsed['dropdown']" class="text-muted card-collapse"><fa [name]="cardCollapsed['dropdown']?'plus-circle':'minus-circle'" class="pull-right"></fa></a>
-        <h2 class="card-title">Dropdown</h2>
+        <a (click)="cardCollapsed['dropdowns'] = !cardCollapsed['dropdowns']" class="text-muted card-collapse"><fa [name]="cardCollapsed['dropdowns']?'plus-circle':'minus-circle'" class="pull-right"></fa></a>
+        <h2 class="card-title">Dropdowns</h2>
         <p class="card-subtitle text-muted">Powered by <a href="https://ng-bootstrap.github.io" target="_blank">ng-bootstrap</a></p>
       </div>
-      <div class="card-block" [ngbCollapse]="cardCollapsed['dropdown']">
+      <div class="card-block" [ngbCollapse]="cardCollapsed['dropdowns']">
         <div ngbDropdown class="d-inline-block">
           <button class="btn btn-outline-primary" id="dropdownMenu1" ngbDropdownToggle>Dropdown</button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
