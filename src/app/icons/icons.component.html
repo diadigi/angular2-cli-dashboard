@@ -7,10 +7,11 @@
   <div class="col-md-12">
     <div class="card">
       <div class="card-header">
+        <a (click)="cardCollapsed['fontawesome_icons'] = !cardCollapsed['fontawesome_icons']" class="text-muted card-collapse"><fa [name]="cardCollapsed['fontawesome_icons']?'plus-circle':'minus-circle'" class="pull-right"></fa></a>
         <h2 class="card-title">Fontawesome Icons</h2>
         <p class="card-subtitle text-muted">Powered by <a href="https://github.com/travelist/angular2-fontawesome" target="_blank">angular2-fontawesome</a></p>
       </div>
-      <div class="card-block">
+      <div class="card-block" [ngbCollapse]="cardCollapsed['fontawesome_icons']">
         <h3 class="mt-2">Web Application Icons</h3>
         <div class="row">
           <div class="col-md-3 col-sm-4 mt-2"><fa [name]="'adjust'"></fa><span class="small"> adjust</span></div>

@@ -35,6 +35,10 @@ describe('Component: Gmap', () => {
     it('should set markers', () => {
       expect(component.markers).toBeTruthy;
     });
+
+    it('should set cardCollapsed', () => {
+      expect(component.cardCollapsed).toBeTruthy();
+    });
   });
 
   describe('Method: clickedMarker', () => {

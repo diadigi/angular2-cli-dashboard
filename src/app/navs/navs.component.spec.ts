@@ -30,5 +30,9 @@ describe('Component: Navs', () => {
     it('should set tabset', () => {
       expect(component.tabset).toBeTruthy();
     });
+
+    it('should set cardCollapsed', () => {
+      expect(component.cardCollapsed).toBeTruthy();
+    });
   });
 });

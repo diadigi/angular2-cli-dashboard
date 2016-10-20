@@ -34,6 +34,10 @@ describe('Component: General', () => {
       expect(component.isCollapsed).toBeFalsy();
     });
 
+    it('should set cardCollapsed', () => {
+      expect(component.cardCollapsed).toBeTruthy();
+    });
+
     it('should configure NgbDrowpdown', () => {
       expect(ddConfig.autoClose).toBeTruthy();
     });

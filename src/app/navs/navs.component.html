@@ -7,10 +7,11 @@
   <div class="col-md-6">
     <div class="card">
       <div class="card-header">
+        <a (click)="cardCollapsed['accordion'] = !cardCollapsed['accordion']" class="text-muted card-collapse"><fa [name]="cardCollapsed['accordion']?'plus-circle':'minus-circle'" class="pull-right"></fa></a>
         <h2 class="card-title">Accordion</h2>
         <p class="card-subtitle text-muted">Powered by <a href="https://ng-bootstrap.github.io" target="_blank">ng-bootstrap</a></p>
       </div>
-      <div class="card-block">
+      <div class="card-block" [ngbCollapse]="cardCollapsed['accordion']">
         <ngb-accordion #acc="ngbAccordion" activeIds="1,2">
          <ngb-panel *ngFor="let panel of accordionPanels;" id="{{panel.id}}" type="{{panel.type}}" disabled="{{panel.disabled}}">
            <template ngbPanelTitle>
@@ -32,10 +33,11 @@
   <div class="col-md-6">
     <div class="card">
       <div class="card-header">
+        <a (click)="cardCollapsed['tab_navigation'] = !cardCollapsed['tab_navigation']" class="text-muted card-collapse"><fa [name]="cardCollapsed['tab_navigation']?'plus-circle':'minus-circle'" class="pull-right"></fa></a>
         <h2 class="card-title">Tab Navigation</h2>
         <p class="card-subtitle text-muted">Powered by <a href="https://ng-bootstrap.github.io" target="_blank">ng-bootstrap</a></p>
       </div>
-      <div class="card-block">
+      <div class="card-block" [ngbCollapse]="cardCollapsed['tab_navigation']">
         <ngb-tabset #tp="ngbTabset">
           <ngb-tab *ngFor="let tab of tabset;" id="{{tab.id}}" disabled="{{tab.disabled}}">
             <template ngbTabTitle><span [innerHTML]="tab.title"></span></template>
@@ -50,10 +52,11 @@
     </div>
     <div class="card">
       <div class="card-header">
+        <a (click)="cardCollapsed['pills_navigation'] = !cardCollapsed['pills_navigation']" class="text-muted card-collapse"><fa [name]="cardCollapsed['pills_navigation']?'plus-circle':'minus-circle'" class="pull-right"></fa></a>
         <h2 class="card-title">Pills Navigation</h2>
         <p class="card-subtitle text-muted">Powered by <a href="https://ng-bootstrap.github.io" target="_blank">ng-bootstrap</a></p>
       </div>
-      <div class="card-block">
+      <div class="card-block" [ngbCollapse]="cardCollapsed['pills_navigation']">
         <ngb-tabset type="pills" #ts="ngbTabset">
           <ngb-tab *ngFor="let tab of tabset;" id="{{tab.id}}" disabled="{{tab.disabled}}">
             <template ngbTabTitle><span [innerHTML]="tab.title"></span></template>

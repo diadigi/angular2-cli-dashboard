@@ -23,6 +23,7 @@ export class GmapComponent implements OnInit {
       draggable: false
     }
   ];
+  public cardCollapsed: any[] = [];
 
   constructor() { }
 

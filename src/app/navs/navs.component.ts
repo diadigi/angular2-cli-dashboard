@@ -15,6 +15,7 @@ import { DataListService } from '../shared/data-list/data-list.service';
 export class NavsComponent implements OnInit {
   public accordionPanels: any[] = [];
   public tabset: any[] = [];
+  public cardCollapsed: any[] = [];
   private errorMessage: string;
 
   constructor(accConfig: NgbAccordionConfig, tsConfig: NgbTabsetConfig, public dataListService: DataListService) {

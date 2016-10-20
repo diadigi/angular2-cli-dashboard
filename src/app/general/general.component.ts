@@ -13,6 +13,7 @@ const now = new Date();
 })
 
 export class GeneralComponent implements OnInit {
+  public cardCollapsed: any[] = [];
   public isCollapsed: boolean = false;
   public dpModel: NgbDateStruct;
   public dpDisabled: boolean = false;

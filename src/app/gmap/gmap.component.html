@@ -7,10 +7,11 @@
   <div class="col-md-12">
     <div class="card">
       <div class="card-header">
+        <a (click)="cardCollapsed['google_map'] = !cardCollapsed['google_map']" class="text-muted card-collapse"><fa [name]="cardCollapsed['google_map']?'plus-circle':'minus-circle'" class="pull-right"></fa></a>
         <h2 class="card-title">Google Map</h2>
         <p class="card-subtitle text-muted">Powered by <a href="https://github.com/SebastianM/angular2-google-maps" target="_blank">angular2-google-maps</a></p>
       </div>
-      <div class="card-block">
+      <div class="card-block" [ngbCollapse]="cardCollapsed['google_map']">
         <sebm-google-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" [disableDefaultUI]="false" [zoomControl]="false" (mapClick)="mapClicked($event)">
           <sebm-google-map-marker *ngFor="let m of markers; let i = index" (markerClick)="clickedMarker(m.label, i)" [latitude]="m.lat" [longitude]="m.lng" [label]="m.label" [markerDraggable]="m.draggable" (dragEnd)="markerDragEnd(m, $event)">
             <sebm-google-map-info-window>
@@ -24,6 +25,10 @@
               [editable]="true">
           </sebm-google-map-circle>
         </sebm-google-map>
+        <footer>
+          <hr/>
+          <p>Check the browser console for some interesting messages.</p>
+        </footer>
       </div>
     </div>
   </div>

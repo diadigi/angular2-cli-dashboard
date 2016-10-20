@@ -7,10 +7,11 @@
   <div class="col-md-6">
     <div class="card">
       <div class="card-header">
+        <a (click)="cardCollapsed['collapse'] = !cardCollapsed['collapse']" class="text-muted card-collapse"><fa [name]="cardCollapsed['collapse']?'plus-circle':'minus-circle'" class="pull-right"></fa></a>
         <h2 class="card-title">Collapse</h2>
         <p class="card-subtitle text-muted">Powered by <a href="https://ng-bootstrap.github.io" target="_blank">ng-bootstrap</a></p>
       </div>
-      <div class="card-block">
+      <div class="card-block" [ngbCollapse]="cardCollapsed['collapse']">
         <div [ngbCollapse]="isCollapsed">
           <div class="card">
             <div class="card-block">
@@ -28,10 +29,11 @@
   <div class="col-md-6">
     <div class="card">
       <div class="card-header">
+        <a (click)="cardCollapsed['dropdown'] = !cardCollapsed['dropdown']" class="text-muted card-collapse"><fa [name]="cardCollapsed['dropdown']?'plus-circle':'minus-circle'" class="pull-right"></fa></a>
         <h2 class="card-title">Dropdown</h2>
         <p class="card-subtitle text-muted">Powered by <a href="https://ng-bootstrap.github.io" target="_blank">ng-bootstrap</a></p>
       </div>
-      <div class="card-block">
+      <div class="card-block" [ngbCollapse]="cardCollapsed['dropdown']">
         <div ngbDropdown class="d-inline-block">
           <button class="btn btn-outline-primary" id="dropdownMenu1" ngbDropdownToggle>Dropdown</button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
@@ -66,10 +68,11 @@
     </div>
     <div class="card">
       <div class="card-header">
+        <a (click)="cardCollapsed['basic_datepicker'] = !cardCollapsed['basic_datepicker']" class="text-muted card-collapse"><fa [name]="cardCollapsed['basic_datepicker']?'plus-circle':'minus-circle'" class="pull-right"></fa></a>
         <h2 class="card-title">Basic Datepicker</h2>
         <p class="card-subtitle text-muted">Powered by <a href="https://ng-bootstrap.github.io" target="_blank">ng-bootstrap</a></p>
       </div>
-      <div class="card-block">
+      <div class="card-block" [ngbCollapse]="cardCollapsed['basic_datepicker']">
         <ngb-datepicker #dp [(ngModel)]="dpModel" [disabled]="dpDisabled"></ngb-datepicker>
         <footer>
           <hr/>
@@ -85,10 +88,11 @@
     </div>
     <div class="card">
       <div class="card-header">
+        <a (click)="cardCollapsed['input_datepicker'] = !cardCollapsed['input_datepicker']" class="text-muted card-collapse"><fa [name]="cardCollapsed['input_datepicker']?'plus-circle':'minus-circle'" class="pull-right"></fa></a>
         <h2 class="card-title">Input Datepicker</h2>
         <p class="card-subtitle text-muted">Powered by <a href="https://ng-bootstrap.github.io" target="_blank">ng-bootstrap</a></p>
       </div>
-      <div class="card-block">
+      <div class="card-block" [ngbCollapse]="cardCollapsed['input_datepicker']">
         <form class="form-inline">
           <div class="form-group">
             <div class="input-group">
