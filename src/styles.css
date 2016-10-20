@@ -1,4 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+html {
+  font-weight: lighter;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-weight: 200;
+}
+
+.navbar-brand {
+  font-weight: 300;
+}
+
+.btn {
+  font-weight: 300;
+}
 
 .card-collapse {
   cursor: pointer;
