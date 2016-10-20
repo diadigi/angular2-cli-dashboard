@@ -34,7 +34,6 @@ export class GeneralComponent implements OnInit {
 
     // progressbar config
     pbConfig.max = 1000;
-    pbConfig.striped = true;
     pbConfig.animated = true;
     pbConfig.type = 'success';
   }

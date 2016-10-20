@@ -59,9 +59,6 @@ describe('Component: General', () => {
       it('should set max', () => {
           expect(pbConfig.max).toBeTruthy();
       });
-      it('should set striped', () => {
-          expect(pbConfig.striped).toBeTruthy();
-      });
       it('should set animated', () => {
           expect(pbConfig.animated).toBeTruthy();
       });
