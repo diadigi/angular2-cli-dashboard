@@ -12,6 +12,32 @@
         <p class="card-subtitle text-muted">Powered by <a href="https://ng-bootstrap.github.io" target="_blank">ng-bootstrap</a></p>
       </div>
       <div class="card-block" [ngbCollapse]="cardCollapsed['alerts']">
+        <p>
+          <ngb-alert>I'm nothing special.</ngb-alert>
+        </p>
+        <p>
+          <ngb-alert [dismissible]="false">I'm a little special, I can't be dismissed.</ngb-alert>
+        </p>
+        <p>
+          <ngb-alert [type]="'info'">I've got some info for you.</ngb-alert>
+        </p>
+        <p>
+          <ngb-alert [type]="'warning'">I'm warning you.</ngb-alert>
+        </p>
+        <p>
+          <ngb-alert [type]="'success'">I'm successful.</ngb-alert>
+        </p>
+        <p>
+          <ngb-alert [type]="'danger'">I'm dangerous.</ngb-alert>
+        </p>
+        <p>
+          <ngb-alert [type]="'custom'">I'm custom.</ngb-alert>
+        </p>
+        <ngb-alert *ngIf="selfClosingVisible" type="success" (close)="closeSelfClosing()">I'll be gone in 5 seconds.</ngb-alert>
+        <p *ngIf="!selfClosingVisible">
+          <button class="btn btn-sm btn-outline-primary" (click)="showSelfClosing()">Show a self-closing alert</button>
+        </p>
+
       </div>
     </div>
   </div>
