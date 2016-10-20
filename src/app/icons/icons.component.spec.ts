@@ -6,7 +6,7 @@ import { IconsComponent } from './icons.component';
 describe('Component: Icons', () => {
   describe('Instantiation:', () => {
     let component = new IconsComponent();
-    
+
     it('should create an instance', () => {
       expect(component).toBeTruthy();
     });

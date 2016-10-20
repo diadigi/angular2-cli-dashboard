@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IconsComponent implements OnInit {
   public cardCollapsed: any[] = [];
-  
+
   constructor() { }
 
   ngOnInit() { }
