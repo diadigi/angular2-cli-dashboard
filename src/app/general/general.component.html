@@ -91,6 +91,29 @@
     </div>
     <div class="card">
       <div class="card-header">
+        <a (click)="cardCollapsed['tooltips'] = !cardCollapsed['tooltips']" class="text-muted card-collapse"><fa [name]="cardCollapsed['tooltips']?'plus-circle':'minus-circle'" class="pull-right"></fa></a>
+        <h2 class="card-title">Tooltips</h2>
+        <p class="card-subtitle text-muted">Powered by <a href="https://ng-bootstrap.github.io" target="_blank">ng-bootstrap</a></p>
+      </div>
+      <div class="card-block" [ngbCollapse]="cardCollapsed['tooltips']">
+        <h4>Simple</h4>
+        <button type="button" class="btn btn-outline-primary d-block mb-1" placement="top" ngbTooltip="Tooltip on top">Tooltip on top</button>
+        <button type="button" class="btn btn-outline-primary d-block mb-1" placement="right" ngbTooltip="Tooltip on right">Tooltip on right</button>
+        <button type="button" class="btn btn-outline-primary d-block mb-1" placement="bottom" ngbTooltip="Tooltip on bottom">Tooltip on bottom</button>
+        <button type="button" class="btn btn-outline-primary d-block mb-1" placement="left" ngbTooltip="Tooltip on left">Tooltip on left</button>
+        <template #complexTip>Here's some data: <b>{{tooltipData}}</b>!</template>
+        <button type="button" class="btn btn-outline-primary d-block mb-1" [ngbTooltip]="complexTip" placement="right">Complex tooltip</button>
+        <hr/>
+        <h4>Tooltip triggers</h4>
+        <button type="button" class="btn btn-outline-primary d-block mb-1" ngbTooltip="Yay!" triggers="click:blur">Tooltip on click</button>
+        <button type="button" class="btn btn-outline-primary d-block mb-1" ngbTooltip="Double Yay!" triggers="manual" #manualTip="ngbTooltip" (click)="manualTipOpen = true; manualTip.open()">Tooltip on click, manual</button>
+        <button type="button" class="btn btn-outline-primary btn-sm d-block mb-1" *ngIf="manualTipOpen" (click)="manualTipOpen = false; manualTip.close()">Close manual tooltip</button>
+        <footer>
+        </footer>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
         <a (click)="cardCollapsed['dropdowns'] = !cardCollapsed['dropdowns']" class="text-muted card-collapse"><fa [name]="cardCollapsed['dropdowns']?'plus-circle':'minus-circle'" class="pull-right"></fa></a>
         <h2 class="card-title">Dropdowns</h2>
         <p class="card-subtitle text-muted">Powered by <a href="https://ng-bootstrap.github.io" target="_blank">ng-bootstrap</a></p>

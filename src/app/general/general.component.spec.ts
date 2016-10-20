@@ -3,20 +3,21 @@
 import { TestBed, async } from '@angular/core/testing';
 import { GeneralComponent } from './general.component';
 import { NgbDropdownConfig } from '@ng-bootstrap/ng-bootstrap';
-import { NgbDatepickerConfig, NgbDateStruct, NgbProgressbarConfig, NgbRatingConfig } from '@ng-bootstrap/ng-bootstrap';
+import { NgbDatepickerConfig, NgbDateStruct, NgbProgressbarConfig, NgbRatingConfig, NgbTooltipConfig } from '@ng-bootstrap/ng-bootstrap';
 
 describe('Component: General', () => {
   let ddConfig = new NgbDropdownConfig;
   let dpConfig = new NgbDatepickerConfig;
   let pbConfig = new NgbProgressbarConfig;
   let rConfig = new NgbRatingConfig;
+  let tConfig = new NgbTooltipConfig;
   let component: any;
 
   let minDate: any = {year: 1900, month: 1, day: 1};
   let maxDate: any = {year: 2099, month: 12, day: 31};
 
   beforeAll(() => {
-    component = new GeneralComponent(ddConfig, dpConfig, pbConfig, rConfig);
+    component = new GeneralComponent(ddConfig, dpConfig, pbConfig, rConfig, tConfig);
   });
 
   describe('Instatiation:', () => {
@@ -38,6 +39,10 @@ describe('Component: General', () => {
 
     it('should set cardCollapsed', () => {
       expect(component.cardCollapsed).toBeTruthy();
+    });
+
+    it('should set tooltipData', () => {
+      expect(component.tooltipData).toBeTruthy();
     });
 
     it('should configure NgbDrowpdown', () => {
@@ -74,6 +79,15 @@ describe('Component: General', () => {
       });
       it('should set type', () => {
           expect(pbConfig.type).toBeTruthy();
+      });
+    });
+
+    describe('should configure NgbTooltip', () => {
+      it('should set placement', () => {
+          expect(tConfig.placement).toBeTruthy();
+      });
+      it('should set triggers', () => {
+          expect(tConfig.triggers).toBeTruthy();
       });
     });
   });

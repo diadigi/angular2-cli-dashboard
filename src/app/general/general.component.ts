@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { NgbDropdownConfig } from '@ng-bootstrap/ng-bootstrap';
-import { NgbDatepickerConfig, NgbDateStruct, NgbProgressbarConfig, NgbRatingConfig } from '@ng-bootstrap/ng-bootstrap';
+import { NgbDatepickerConfig, NgbDateStruct, NgbProgressbarConfig, NgbRatingConfig, NgbTooltipConfig } from '@ng-bootstrap/ng-bootstrap';
 
 const now = new Date();
 
@@ -17,8 +17,14 @@ export class GeneralComponent implements OnInit {
   public isCollapsed: boolean = false;
   public dpModel: NgbDateStruct;
   public dpDisabled: boolean = false;
+  public tooltipData: string = 'Tooltips are great!';
 
-  constructor(ddConfig: NgbDropdownConfig, dpConfig: NgbDatepickerConfig, pbConfig: NgbProgressbarConfig, rConfig: NgbRatingConfig) {
+  constructor(
+    ddConfig: NgbDropdownConfig,
+    dpConfig: NgbDatepickerConfig,
+    pbConfig: NgbProgressbarConfig,
+    rConfig: NgbRatingConfig,
+    tConfig: NgbTooltipConfig) {
     // dropdown config
     ddConfig.autoClose = true;
 
@@ -40,6 +46,10 @@ export class GeneralComponent implements OnInit {
     // rating config
     rConfig.max = 10;
     rConfig.readonly = false;
+
+    // tooltip config
+    tConfig.placement = 'right';
+    tConfig.triggers = 'click';
   }
 
   ngOnInit() {
