@@ -13,9 +13,9 @@ import { DataListService } from '../shared/data-list/data-list.service';
 })
 
 export class NavsComponent implements OnInit {
-  accordionPanels: any[] = [];
-  tabset: any[] = [];
-  errorMessage: string;
+  public accordionPanels: any[] = [];
+  public tabset: any[] = [];
+  private errorMessage: string;
 
   constructor(accConfig: NgbAccordionConfig, tsConfig: NgbTabsetConfig, public dataListService: DataListService) {
     accConfig.closeOthers = false;
@@ -27,7 +27,7 @@ export class NavsComponent implements OnInit {
     this.getTabsetData();
   }
 
-  getAccordionData() {
+  private getAccordionData() {
     this.dataListService.get('accordion')
       .subscribe(
         accordionPanels => this.accordionPanels = accordionPanels,
@@ -35,12 +35,11 @@ export class NavsComponent implements OnInit {
       );
   }
 
-  getTabsetData() {
+  private getTabsetData() {
     this.dataListService.get('tabset')
       .subscribe(
         tabset => this.tabset = tabset,
         error =>  this.errorMessage = <any>error
       );
   }
-
 }

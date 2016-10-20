@@ -10,10 +10,25 @@ import { DataListService } from '../shared/data-list/data-list.service';
 describe('Component: Navs', () => {
   let accConfig = new NgbAccordionConfig;
   let tsConfig = new NgbTabsetConfig;
-  let ds = new DataListService();
+  let http: any;
+  let ds = new DataListService(http);
+  let component: any;
 
-  it('should create an instance', () => {
-    let component = new NavsComponent(accConfig, tsConfig, ds);
-    expect(component).toBeTruthy();
+  describe('Instantiation', () => {
+    beforeAll(() => {
+      component = new NavsComponent(accConfig, tsConfig, ds);
+    });
+
+    it('should create an instance', () => {
+      expect(component).toBeTruthy();
+    });
+
+    it('should set accordionPanels', () => {
+      expect(component.accordionPanels).toBeTruthy();
+    });
+
+    it('should set tabset', () => {
+      expect(component.tabset).toBeTruthy();
+    });
   });
 });

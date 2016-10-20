@@ -8,15 +8,18 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Angular CLI Dashboard';
-  currentPath = '';
+  public title: string = 'Angular CLI Dashboard';
+  public currentPath: string = '';
 
   constructor(private router: Router) {
+    this.subscribeToRouteChanges();
+  }
+
+  private subscribeToRouteChanges(): void {
     this.router.events.subscribe(event => {
       if (event.constructor.name === 'NavigationStart') {
         this.currentPath = event.url;
       }
     });
   }
-
 }

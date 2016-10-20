@@ -13,9 +13,9 @@ const now = new Date();
 })
 
 export class GeneralComponent implements OnInit {
-  public isCollapsed = false;
+  public isCollapsed: boolean = false;
   public dpModel: NgbDateStruct;
-  public dpDisabled = false;
+  public dpDisabled: boolean = false;
 
   constructor(ddConfig: NgbDropdownConfig, dpConfig: NgbDatepickerConfig) {
     // dropdown config
@@ -32,14 +32,14 @@ export class GeneralComponent implements OnInit {
     };
   }
 
-  public selectToday() {
+  ngOnInit() {
+  }
+
+  public selectToday(): void {
     this.dpModel = {
       year: now.getFullYear(),
       month: now.getMonth() + 1,
       day: now.getDate()
     };
-  }
-
-  ngOnInit() {
   }
 }

@@ -6,10 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./gmap.component.css']
 })
 export class GmapComponent implements OnInit {
-  lat: number = 51.5074;
-  lng: number = -0.118092;
-  zoom: number = 10;
-  markers: any[] = [
+  public lat: number = 51.5074;
+  public lng: number = -0.118092;
+  public zoom: number = 10;
+  public markers: any[] = [
     {
       lat: 51.50036,
       lng: -0.121432,
@@ -29,18 +29,18 @@ export class GmapComponent implements OnInit {
   ngOnInit() {
   }
 
-  clickedMarker(label: string, index: number) {
+  public clickedMarker(label: string, index: number): void {
     console.log(`clicked the marker: ${label || index}`);
   }
 
-  mapClicked($event: any) {
+  public mapClicked($event: any): void {
     this.markers.push({
       lat: $event.coords.lat,
       lng: $event.coords.lng
     });
   }
 
-  markerDragEnd(m: any, $event: any) {
+  public markerDragEnd(m: any, $event: any): void {
     console.log('dragEnd', m, $event);
   }
 }
