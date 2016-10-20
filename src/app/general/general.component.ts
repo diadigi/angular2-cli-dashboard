@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { NgbDropdownConfig } from '@ng-bootstrap/ng-bootstrap';
-import { NgbDatepickerConfig, NgbDateStruct, NgbProgressbarConfig } from '@ng-bootstrap/ng-bootstrap';
+import { NgbDatepickerConfig, NgbDateStruct, NgbProgressbarConfig, NgbRatingConfig } from '@ng-bootstrap/ng-bootstrap';
 
 const now = new Date();
 
@@ -9,7 +9,7 @@ const now = new Date();
   selector: 'app-general',
   templateUrl: './general.component.html',
   styleUrls: ['./general.component.css'],
-  providers: [NgbDropdownConfig]
+  providers: [ NgbDropdownConfig, NgbRatingConfig ]
 })
 
 export class GeneralComponent implements OnInit {
@@ -18,7 +18,7 @@ export class GeneralComponent implements OnInit {
   public dpModel: NgbDateStruct;
   public dpDisabled: boolean = false;
 
-  constructor(ddConfig: NgbDropdownConfig, dpConfig: NgbDatepickerConfig, pbConfig: NgbProgressbarConfig) {
+  constructor(ddConfig: NgbDropdownConfig, dpConfig: NgbDatepickerConfig, pbConfig: NgbProgressbarConfig, rConfig: NgbRatingConfig) {
     // dropdown config
     ddConfig.autoClose = true;
 
@@ -34,9 +34,12 @@ export class GeneralComponent implements OnInit {
 
     // progressbar config
     pbConfig.max = 1000;
-    pbConfig.striped = true;
     pbConfig.animated = true;
     pbConfig.type = 'success';
+
+    // rating config
+    rConfig.max = 10;
+    rConfig.readonly = false;
   }
 
   ngOnInit() {

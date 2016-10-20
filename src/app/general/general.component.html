@@ -60,6 +60,37 @@
   <div class="col-md-6">
     <div class="card">
       <div class="card-header">
+        <a (click)="cardCollapsed['ratings'] = !cardCollapsed['ratings']" class="text-muted card-collapse"><fa [name]="cardCollapsed['ratings']?'plus-circle':'minus-circle'" class="pull-right"></fa></a>
+        <h2 class="card-title">Ratings</h2>
+        <p class="card-subtitle text-muted">Powered by <a href="https://ng-bootstrap.github.io" target="_blank">ng-bootstrap</a></p>
+      </div>
+      <div class="card-block" [ngbCollapse]="cardCollapsed['ratings']">
+        <h4>Simple</h4>
+        <ngb-rating [(rate)]="simpleRate"></ngb-rating><span class="ml-2 text-muted small" *ngIf="simpleRate!=null">You've rated: <b>{{simpleRate}}</b></span>
+        <hr>
+        <h4>Readonly</h4>
+        <ngb-rating [rate]="8" [readonly]="readonly"></ngb-rating>
+        <button class="btn btn-sm btn-outline-primary ml-2" (click)="readonly = !readonly">Toggle readonly</button>
+        <hr>
+        <h4>With events</h4>
+        <ngb-rating [(rate)]="eventsRate" (hover)="eventsHovered=$event" (leave)="eventsHovered=null"></ngb-rating>
+        <span class="ml-2 text-muted small" *ngIf="eventsHovered!=null">You're hovering: <b>{{eventsHovered}}</b></span>
+        <span class="ml-2 text-muted small" *ngIf="eventsRate!=null">You've rated: <b>{{eventsRate}}</b></span>
+        <hr>
+        <h4>Custom star template</h4>
+        <ngb-rating [(rate)]="cstarRate">
+          <template let-fill="fill">
+            <span class="star" [class.filled]="fill === 100">&#9733;</span>
+          </template>
+        </ngb-rating>
+        <span class="ml-2 text-muted small" *ngIf="cstarRate!=null">You've rated: <b>{{cstarRate}}</b></span>
+        <hr>
+        <footer>
+        </footer>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
         <a (click)="cardCollapsed['dropdowns'] = !cardCollapsed['dropdowns']" class="text-muted card-collapse"><fa [name]="cardCollapsed['dropdowns']?'plus-circle':'minus-circle'" class="pull-right"></fa></a>
         <h2 class="card-title">Dropdowns</h2>
         <p class="card-subtitle text-muted">Powered by <a href="https://ng-bootstrap.github.io" target="_blank">ng-bootstrap</a></p>

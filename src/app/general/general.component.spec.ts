@@ -3,19 +3,20 @@
 import { TestBed, async } from '@angular/core/testing';
 import { GeneralComponent } from './general.component';
 import { NgbDropdownConfig } from '@ng-bootstrap/ng-bootstrap';
-import { NgbDatepickerConfig, NgbDateStruct, NgbProgressbarConfig } from '@ng-bootstrap/ng-bootstrap';
+import { NgbDatepickerConfig, NgbDateStruct, NgbProgressbarConfig, NgbRatingConfig } from '@ng-bootstrap/ng-bootstrap';
 
 describe('Component: General', () => {
   let ddConfig = new NgbDropdownConfig;
   let dpConfig = new NgbDatepickerConfig;
   let pbConfig = new NgbProgressbarConfig;
+  let rConfig = new NgbRatingConfig;
   let component: any;
 
   let minDate: any = {year: 1900, month: 1, day: 1};
   let maxDate: any = {year: 2099, month: 12, day: 31};
 
   beforeAll(() => {
-    component = new GeneralComponent(ddConfig, dpConfig, pbConfig);
+    component = new GeneralComponent(ddConfig, dpConfig, pbConfig, rConfig);
   });
 
   describe('Instatiation:', () => {
@@ -55,12 +56,18 @@ describe('Component: General', () => {
       });
     });
 
+    describe('should configure NgbRating', () => {
+      it('should set max', () => {
+          expect(rConfig.max).toBeTruthy();
+      });
+      it('should set disabled', () => {
+        expect(rConfig.disabled).toBeFalsy();
+      });
+    });
+
     describe('should configure NgbProgressbar', () => {
       it('should set max', () => {
           expect(pbConfig.max).toBeTruthy();
-      });
-      it('should set striped', () => {
-          expect(pbConfig.striped).toBeTruthy();
       });
       it('should set animated', () => {
           expect(pbConfig.animated).toBeTruthy();
