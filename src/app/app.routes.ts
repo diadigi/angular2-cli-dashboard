@@ -5,6 +5,7 @@ import { NavsComponent } from './navs/navs.component';
 import { IconsComponent } from './icons/icons.component';
 import { GmapComponent } from './gmap/gmap.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { AlertsComponent } from './alerts/alerts.component';
 
 export const routes: Routes = [
   {
@@ -30,6 +31,10 @@ export const routes: Routes = [
       {
         path: 'icons',
         component: IconsComponent
+      },
+      {
+        path: 'alerts',
+        component: AlertsComponent
       }
     ]
   },
