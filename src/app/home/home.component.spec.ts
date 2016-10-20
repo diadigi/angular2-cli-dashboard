@@ -20,11 +20,11 @@ describe('Component: Home', () => {
   });
 
   describe('Template:', () => {
-    it('should say "home works" in a p tag', async(() => {
+    it('should say "Home" in a h1 tag', async(() => {
       let fixture = TestBed.createComponent(HomeComponent);
       fixture.detectChanges();
       let compiled = fixture.debugElement.nativeElement;
-      expect(compiled.querySelector('p').textContent).toContain('home works!');
+      expect(compiled.querySelector('h1').textContent).toContain('Home');
     }));
   });
 });
