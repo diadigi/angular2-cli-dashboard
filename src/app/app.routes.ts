@@ -6,6 +6,7 @@ import { IconsComponent } from './icons/icons.component';
 import { GmapComponent } from './gmap/gmap.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { AlertsComponent } from './alerts/alerts.component';
+import { LoginComponent } from './login/login.component';
 
 export const routes: Routes = [
   {
@@ -41,6 +42,10 @@ export const routes: Routes = [
   {
     path: 'google-maps',
     component: GmapComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
   },
   {
     path: '404',

@@ -18,6 +18,7 @@ import { GmapModule } from './gmap/gmap.module';
 import { AlertsModule } from './alerts/alerts.module';
 import { NotFoundModule } from './not-found/not-found.module';
 import { NavbarModule } from './shared/navbar/navbar.module';
+import { LoginModule } from './login/login.module';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { NavbarModule } from './shared/navbar/navbar.module';
     GmapModule,
     AlertsModule,
     NotFoundModule,
-    NavbarModule
+    NavbarModule,
+    LoginModule
   ],
   providers: [],
   bootstrap: [AppComponent]
