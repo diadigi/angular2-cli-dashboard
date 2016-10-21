@@ -27,7 +27,7 @@ export class NavbarComponent implements OnInit {
     const tree = this.router.parseUrl(this.router.url);
     if (tree.fragment) {
       // you can use DomAdapter
-      const element = document.querySelector("#" + tree.fragment);
+      const element = document.querySelector('#' + tree.fragment);
       if (element) { element.scrollIntoView(element); }
     }
   };
