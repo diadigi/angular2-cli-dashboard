@@ -4,7 +4,7 @@
 
 Angular2CliDashboard supports [ng2-bootstrap]https://ng-bootstrap.github.io, [angular2-fontawesome]https://github.com/travelist/angular2-fontawesome and [angular2-google-maps]https://github.com/SebastianM/angular2-google-maps.
 
-![Angular2CLiDashboard Screenshot](/screenshot.jpg?raw=true)
+![Angular2CLiDashboard Screenshot](/screenshot.png?raw=true)
 
 ## Angular CLI
 
