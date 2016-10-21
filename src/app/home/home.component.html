@@ -1,5 +1,39 @@
 <div class="row mb-3 mt-3">
   <div class="col-md-12 mt-3">
     <h1>Home</h1>
+    <ul>
+      <li>UI
+        <ul>
+          <li><a [routerLink]="['/ui/general']">General</a>
+            <ul>
+              <li><a [routerLink]="['/ui/general']" fragment="progress_bars">Progress Bars</a></li>
+              <li><a [routerLink]="['/ui/general']" fragment="ratings">Ratings</a></li>
+              <li><a [routerLink]="['/ui/general']" fragment="collapse">Collapse</a></li>
+              <li><a [routerLink]="['/ui/general']" fragment="tooltips">Tooltips</a></li>
+              <li><a [routerLink]="['/ui/general']" fragment="dropdowns">Dropdowns</a></li>
+              <li><a [routerLink]="['/ui/general']" fragment="datepickers">Datepickers</a></li>
+            </ul>
+          </li>
+          <li><a [routerLink]="['/ui/navigation-accordions']">Navigation & Accordions</a>
+            <ul>
+              <li><a [routerLink]="['/ui/navigation-accordions']" fragment="accordions">Accordions</a></li>
+              <li><a [routerLink]="['/ui/navigation-accordions']" fragment="tab_navigation">Tab Navigation</a></li>
+              <li><a [routerLink]="['/ui/navigation-accordions']" fragment="pills_navigation">Pills Navigation</a></li>
+            </ul>
+          </li>
+          <li><a [routerLink]="['/ui/icons']">Icons</a>
+            <ul>
+              <li><a [routerLink]="['/ui/icons']" fragment="fontawesome">Fontawesome</a></li>
+            </ul>
+          </li>
+          <li><a [routerLink]="['/ui/alerts']">Alerts</a>
+            <ul>
+              <li><a [routerLink]="['/ui/alerts']" fragment="bootstrap_alerts">Bootstrap Alerts</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a [routerLink]="['/google-maps']">Google Maps</a></li>
+    </ul>
   </div>
 </div>

@@ -10,7 +10,7 @@
 </div>
 <div class="row">
   <div class="col-md-6">
-    <div class="card">
+    <div class="card" id="progress_bars">
       <div class="card-header">
         <a (click)="cardCollapsed['progress_bars'] = !cardCollapsed['progress_bars']" class="text-muted card-collapse"><fa [name]="cardCollapsed['progress_bars']?'plus-circle':'minus-circle'" class="pull-right"></fa></a>
         <h2 class="card-title">Progress Bars</h2>
@@ -41,7 +41,7 @@
         <ngb-progressbar type="success" [value]="25" [striped]="true" [animated]="true"></ngb-progressbar>
       </div>
     </div>
-    <div class="card">
+    <div class="card" id="collapse">
       <div class="card-header">
         <a (click)="cardCollapsed['collapse'] = !cardCollapsed['collapse']" class="text-muted card-collapse"><fa [name]="cardCollapsed['collapse']?'plus-circle':'minus-circle'" class="pull-right"></fa></a>
         <h2 class="card-title">Collapse</h2>
@@ -63,7 +63,7 @@
     </div>
   </div>
   <div class="col-md-6">
-    <div class="card">
+    <div class="card" id="ratings">
       <div class="card-header">
         <a (click)="cardCollapsed['ratings'] = !cardCollapsed['ratings']" class="text-muted card-collapse"><fa [name]="cardCollapsed['ratings']?'plus-circle':'minus-circle'" class="pull-right"></fa></a>
         <h2 class="card-title">Ratings</h2>
@@ -94,7 +94,7 @@
         </footer>
       </div>
     </div>
-    <div class="card">
+    <div class="card" id="tooltips">
       <div class="card-header">
         <a (click)="cardCollapsed['tooltips'] = !cardCollapsed['tooltips']" class="text-muted card-collapse"><fa [name]="cardCollapsed['tooltips']?'plus-circle':'minus-circle'" class="pull-right"></fa></a>
         <h2 class="card-title">Tooltips</h2>
@@ -117,7 +117,7 @@
         </footer>
       </div>
     </div>
-    <div class="card">
+    <div class="card" id="dropdowns">
       <div class="card-header">
         <a (click)="cardCollapsed['dropdowns'] = !cardCollapsed['dropdowns']" class="text-muted card-collapse"><fa [name]="cardCollapsed['dropdowns']?'plus-circle':'minus-circle'" class="pull-right"></fa></a>
         <h2 class="card-title">Dropdowns</h2>
@@ -156,33 +156,24 @@
         </footer>
       </div>
     </div>
-    <div class="card">
+    <div class="card" id="datepickers">
       <div class="card-header">
-        <a (click)="cardCollapsed['basic_datepicker'] = !cardCollapsed['basic_datepicker']" class="text-muted card-collapse"><fa [name]="cardCollapsed['basic_datepicker']?'plus-circle':'minus-circle'" class="pull-right"></fa></a>
-        <h2 class="card-title">Basic Datepicker</h2>
+        <a (click)="cardCollapsed['datepickers'] = !cardCollapsed['datepickers']" class="text-muted card-collapse"><fa [name]="cardCollapsed['datepickers']?'plus-circle':'minus-circle'" class="pull-right"></fa></a>
+        <h2 class="card-title">Datepickers</h2>
         <p class="card-subtitle text-muted">Powered by <a href="https://ng-bootstrap.github.io" target="_blank">ng-bootstrap</a></p>
       </div>
-      <div class="card-block" [ngbCollapse]="cardCollapsed['basic_datepicker']">
+      <div class="card-block" [ngbCollapse]="cardCollapsed['datepickers']">
+        <h4>Basic</h4>
         <ngb-datepicker #dp [(ngModel)]="dpModel" [disabled]="dpDisabled"></ngb-datepicker>
-        <footer>
-          <hr/>
-          <button class="btn btn-sm btn-outline-primary" (click)="selectToday()">Pick today</button>
-          <button class="btn btn-sm btn-outline-primary" (click)="dp.navigateTo()">Current month</button>
-          <button class="btn btn-sm btn-outline-primary" (click)="dp.navigateTo({year: 2013, month: 6})">June 2013</button>
-          <button class="btn btn-sm btn-outline-{{dpDisabled ? 'success' : 'danger'}}" (click)="dpDisabled = !dpDisabled">
-            {{ dpDisabled ? "Enable" : "Disable" }} Calendar
-          </button>
-          <p class="mt-2 info" *ngIf="dpModel!=undefined">Selected date is: {{dpModel | json}}</p>
-        </footer>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-header">
-        <a (click)="cardCollapsed['input_datepicker'] = !cardCollapsed['input_datepicker']" class="text-muted card-collapse"><fa [name]="cardCollapsed['input_datepicker']?'plus-circle':'minus-circle'" class="pull-right"></fa></a>
-        <h2 class="card-title">Input Datepicker</h2>
-        <p class="card-subtitle text-muted">Powered by <a href="https://ng-bootstrap.github.io" target="_blank">ng-bootstrap</a></p>
-      </div>
-      <div class="card-block" [ngbCollapse]="cardCollapsed['input_datepicker']">
+        <button class="btn btn-sm btn-outline-primary" (click)="selectToday()">Pick today</button>
+        <button class="btn btn-sm btn-outline-primary" (click)="dp.navigateTo()">Current month</button>
+        <button class="btn btn-sm btn-outline-primary" (click)="dp.navigateTo({year: 2013, month: 6})">June 2013</button>
+        <button class="btn btn-sm btn-outline-{{dpDisabled ? 'success' : 'danger'}}" (click)="dpDisabled = !dpDisabled">
+          {{ dpDisabled ? "Enable" : "Disable" }} Calendar
+        </button>
+        <p class="mt-2 info" *ngIf="dpModel!=undefined">Selected date is: {{dpModel | json}}</p>
+        <hr/>
+        <h4>Input</h4>
         <form class="form-inline">
           <div class="form-group">
             <div class="input-group">
@@ -193,11 +184,9 @@
             </div>
           </div>
         </form>
-        <hr/>
-        <footer>
-          <p class="mt-2 info" *ngIf="idpModel!=undefined">Selected date is: {{idpModel | json}}</p>
-        </footer>
+        <p class="mt-2 info" *ngIf="idpModel!=undefined">Selected date is: {{idpModel | json}}</p>
       </div>
     </div>
   </div>
 </div>
+  

@@ -10,10 +10,10 @@
 </div>
 <div class="row">
   <div class="col-md-12">
-    <div class="card">
+    <div class="card" id="bootstrap_alerts">
       <div class="card-header">
         <a (click)="cardCollapsed['alerts'] = !cardCollapsed['alerts']" class="text-muted card-collapse"><fa [name]="cardCollapsed['alerts']?'plus-circle':'minus-circle'" class="pull-right"></fa></a>
-        <h2 class="card-title">Alerts</h2>
+        <h2 class="card-title">Bootstrap Alerts</h2>
         <p class="card-subtitle text-muted">Powered by <a href="https://ng-bootstrap.github.io" target="_blank">ng-bootstrap</a></p>
       </div>
       <div class="card-block" [ngbCollapse]="cardCollapsed['alerts']">

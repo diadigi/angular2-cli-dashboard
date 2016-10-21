@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -16,11 +16,21 @@ export class NavbarComponent implements OnInit {
 
   private subscribeToRouteChanges(): void {
     this.router.events.subscribe(event => {
-      if (event.constructor.name === 'NavigationStart') {
+      if (event instanceof NavigationEnd) {
         this.currentPath = event.url;
+        this.focusOnAnchor();
       }
     });
-  }
+  };
+
+  private focusOnAnchor(): void {
+    const tree = this.router.parseUrl(this.router.url);
+    if (tree.fragment) {
+      // you can use DomAdapter
+      const element = document.querySelector("#" + tree.fragment);
+      if (element) { element.scrollIntoView(element); }
+    }
+  };
 
   ngOnInit() { }
 
