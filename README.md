@@ -2,7 +2,9 @@
 
 ## Angular 2 Admin Dashboard using angular2 final, router v3, angular-cli, ng2-bootstrap
 
-Angular2CliDashboard supports ng2-bootstrap, angular2-fontawesome and angular2-google-maps
+Angular2CliDashboard supports [ng2-bootstrap]https://ng-bootstrap.github.io, [angular2-fontawesome]https://github.com/travelist/angular2-fontawesome and [angular2-google-maps]https://github.com/SebastianM/angular2-google-maps.
+
+![Angular2CLiDashboard Screenshot](/screenshot.jpg?raw=true)
 
 ## Angular CLI
 
